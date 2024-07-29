@@ -1,0 +1,260 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Latar belakang gelap */
+    color: #ffffff; /* Warna font putih */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px; /* Lebar maksimum untuk konten utama */
+    margin: 0 auto;
+    padding: 80px 20px; /* Opsional: memberikan ruang di sisi konten */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #1f1f1f; /* Background header gelap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding: 10px 0; /* Padding vertikal untuk header */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Menyesuaikan lebar konten header */
+    margin: 0 auto;
+    padding: 0 20px; /* Padding horizontal untuk konten header */
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff; /* Warna font putih */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #bbbbbb; /* Warna font link abu-abu terang */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #76c7ff; /* Warna biru muda saat hover */
+}
+
+header nav ul li a.active {
+    color: #76c7ff; /* Warna biru muda untuk link aktif */
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: auto; /* Padding atas untuk mengimbangi header */
+}
+
+section {
+    margin: auto; /* Memusatkan konten */
+    margin: 80px auto -200;
+    border-radius: 10px;
+}
+#home {
+    margin: 80px auto 0;
+}
+#home, #about, #projects {
+    background: #1a1a1a; /* Background gelap */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px auto 0;
+    padding: 40px;
+    transition: transform 0.3s;
+    border-radius: 30px;
+    max-width: 60%;
+}
+#skills {
+    background: #1f1f1f; /* Background section gelap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 80px auto 0;
+    padding: 40px;
+    border-radius: 30px;
+    transition: transform 0.3s;  
+    max-width: 60%;
+}
+#home .content {
+    max-width: 600px;
+    margin-right: 20px; /* Menambahkan margin kanan */
+}
+
+#home img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+#home .btn {
+    display: inline-block;
+    background: #76c7ff; /* Background biru muda */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+#home .btn:hover {
+    background: #5ab1f8; /* Warna biru muda lebih gelap saat hover */
+}
+
+#home .socials a {
+    color: #76c7ff; /* Warna biru muda */
+    margin: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+#home:hover, #about:hover, #skills:hover, #projects:hover{
+    transform: scale(1.05);
+}
+
+#about .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#about .stats div {
+    text-align: center;
+}
+
+#about .stats span {
+    display: block;
+    font-size: 24px;
+    color: #76c7ff; /* Warna biru muda */
+}
+
+#about .btn {
+    display: inline-block;
+    background: #76c7ff; /* Background biru muda */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+#about .btn:hover {
+    background: #5ab1f8; /* Warna biru muda lebih gelap saat hover */
+}
+
+#skills .skill {
+    margin-top: 20px;
+}
+
+#skills .bar {
+    background: #333333; /* Background bar gelap */
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#skills .bar-fill {
+    background: #76c7ff; /* Warna biru muda */
+    padding: 10px;
+    color: white;
+    text-align: right;
+    border-radius: 5px;
+}
+
+footer {
+    background: #1f1f1f; /* Background footer gelap */
+    color: white;
+
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.containerfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer__title {
+    margin: 0;
+}
+
+.footer__subtitle {
+    margin: 0;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer__copyright {
+    margin-top: 10px;
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #76c7ff; /* Warna biru muda */
+    font-size: 24px;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #5ab1f8; /* Warna biru muda lebih gelap saat hover */
+}
+
+
+
+
