@@ -6,7 +6,7 @@
     <title>Yoga Elfaraby - Backend Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -15,10 +15,11 @@
                 <h1>Yoga Elfaraby</h1>
                 <nav>
                     <ul>
-                        <li><a href="#home" >Home</a></li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
                     </ul>   
                 </nav>
             </div>
@@ -29,7 +30,11 @@
         <section id="home">
             <div class="content">
                 <h2>Welcome to My Portfolio</h2>
-                <p>Experienced Backend Developer specializing in robust and scalable server-side solutions.</p>
+                <p>My name is Yoga Ananta Elfaraby, and I am presently a student at Telkom University studying Software Engineering.
+                    <br>
+                    Throughout my academic journey, I have completed numerous programming projects.
+                    <br>
+                    Let's take a look, shall we..</p>
                 <a href="#about" class="btn">Learn More About Me</a>
             </div>
             <div class="profile-container">
@@ -43,17 +48,19 @@
         </section>
 
         <section id="about">
-            <div >
+            <div class="about-container">
                 <h2>About Me</h2>
-                <p>I'm a passionate backend developer with 5+ years of experience in creating efficient and scalable server-side applications.</p>
-                <div class="stats">
-                    <div>
-                        <span>50+</span>
-                        <p>Projects</p>
+                <p>I'm a dedicated backend developer currently studying computer science, with a strong focus on building efficient and scalable server-side applications. My academic projects have allowed me to apply my skills in real-world scenarios, and I'm eager to continue learning and expanding my knowledge in this field.</p>
+                <div class="interests-education">
+                    <div class="interests">
+                        <p>My interests lie in mobile and web programming</p>
                     </div>
-                    <div>
-                        <span>5+</span>
-                        <p>Years Experience</p>
+                    <div class="education">
+                        <h3>Education:</h3>
+                        <ul>
+                            <li>SMAN 1 Situbondo</li>
+                            <li>Software Engineering, Telkom University</li>
+                        </ul>
                     </div>
                 </div>
                 <a href="#skills" class="btn">Check My Skills</a>
@@ -64,13 +71,13 @@
             <div class="container">
                 <h2>Skills</h2>
                 <div class="skill">
-                    <span>Node.js</span>
+                    <span>Flutter</span>
                     <div class="bar">
                         <div class="bar-fill" style="width: 90%;">90%</div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span>Python</span>
+                    <span>Laravel</span>
                     <div class="bar">
                         <div class="bar-fill" style="width: 85%;">85%</div>
                     </div>
@@ -82,7 +89,7 @@
                     </div>
                 </div>
                 <div class="skill">
-                    <span>RESTful APIs</span>
+                    <span>XAMPP</span>
                     <div class="bar">
                         <div class="bar-fill" style="width: 95%;">95%</div>
                     </div>
@@ -90,24 +97,67 @@
             </div>
         </section>
 
-        <section id="projects">
-            <div>
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>E-commerce Backend</h3>
-                    <p>Developed a scalable backend system for a large e-commerce platform using Node.js and MongoDB.</p>
+<!-- Portfolio -->
+<section class="projects">
+    <div class="container">
+        <h2 class="section__title">Portfolio</h2>
+        <span class="section__subtitle">Most Recent Works</span>
+
+        <div class="portfolio__container swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Portfolio 1 -->
+                <div class="portfolio__content swiper-slide">
+                    <h3 class="portfolio__title">Web Development</h3>
+                    <img src="MindMend.jpeg" alt="" class="portfolio__img1">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">MindMend</h3>
+                        <p class="portfolio__description">MindMend is a website that assists users in identifying potential disorders through voice recordings during sleep. <br>The recordings are then analyzed by AI to determine if the user may have sleep apnea or insomnia.<br>Following this, users can schedule a doctor's appointment to seek guidance on managing their symptoms.</p>
+                        <p class="portfolio__description">In this project, I play a crucial role as an assistant to the Scrum Master and backend lead. In addition to backend responsibilities, I frequently collaborate on front-end tasks that my colleagues overlook.</p>
+                        <a href="https://mindmend.humicprototyping.com/" class="btn">
+                            Live Website
+                        </a>
+                        
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Real-time Chat Application</h3>
-                    <p>Built a real-time chat application backend using Socket.io and Express.js.</p>
+
+                <!-- Portfolio 2 -->
+                <div class="portfolio__content swiper-slide">
+                    <h3 class="portfolio__title">Mobile Development</h3>
+                    <img src="Poster_SahabatMahasiswa.png"class="portfolio__img2">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Sahabat Mahasiswa</h3>
+                        <p class="portfolio__description">Sahabat Mahasiswa is an app designed to help students organize their assignments and events efficiently. Refer to the poster for more information.</p>
+                        <p class="portfolio__description">In this project, I manage the backend database using Firebase. I am also responsible for the profile page, where users can update their profiles. Additionally, I frequently serve as a liaison between the project owner and my team.</p>
+                        <a href="https://github.com/Drakkura/mobdev" target="_blank" class="btn">
+                            Github Repo
+                            
+                        </a>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>API Gateway</h3>
-                    <p>Designed and implemented an API gateway to manage microservices using Node.js and Redis.</p>
+
+                <!-- Portfolio 3 -->
+                <div class="portfolio__content swiper-slide">
+                    <img src="Yoga Ananta Elfaraby_page-0001.jpg"" class="portfolio__img1">
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Achivement</h3>
+                        <p class="portfolio__description">MindMend certificate.</p>
+                        <a class="button__notaccess button--flex button--small portfolio__button">
+                            Not Accessible
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
 
+            <!-- Add Arrow -->
+            <div class="swiper-button-next"><i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+            <div class="swiper-button-prev"><i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+        
     </main>
 
     <footer class="footer">
@@ -126,36 +176,23 @@
             <p class="footer__copyright">© Yoga Elfaraby. All right reserved</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll("section");
-            const navLi = document.querySelectorAll("nav ul li a");
-    
-            window.addEventListener("scroll", () => {
-                let current = "";
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (scrollY >= sectionTop - 50) {
-                        current = section.getAttribute("id");
-                    }
-                });
-    
-                navLi.forEach(li => {
-                    li.classList.remove("active");
-                    if (li.getAttribute("href").includes(current)) {
-                        li.classList.add("active");
-                    }
-                });
-            });
-    
-            navLi.forEach(li => {
-                li.addEventListener("click", function() {
-                    navLi.forEach(a => a.classList.remove("active"));
-                    li.classList.add("active");
-                });
-            });
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
         });
-        </script>
+    </script>
+    
 </body>
 </html>

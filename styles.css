@@ -1,46 +1,46 @@
+/* Global Styles */
 html, body {
-    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Latar belakang gelap */
-    color: #ffffff; /* Warna font putih */
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     padding: 0;
 }
 
 .container {
-    max-width: 1200px; /* Lebar maksimum untuk konten utama */
+    max-width: 65%;
     margin: 0 auto;
-    padding: 80px 20px; /* Opsional: memberikan ruang di sisi konten */
+    padding: 80px 20px;
 }
 
+/* Header */
 header {
     position: fixed;
     width: 100%;
-    background-color: #1f1f1f; /* Background header gelap */
+    background-color: #1f1f1f;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     top: 0;
     left: 0;
-    padding: 10px 0; /* Padding vertikal untuk header */
+    padding: 10px 0;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Menyesuaikan lebar konten header */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Padding horizontal untuk konten header */
+    padding: 0 20px;
 }
 
 header h1 {
     margin: 0;
-    color: #ffffff; /* Warna font putih */
+    color: #ffffff;
 }
 
 header nav ul {
@@ -56,55 +56,46 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #bbbbbb; /* Warna font link abu-abu terang */
+    color: #bbbbbb;
     transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #76c7ff; /* Warna biru muda saat hover */
+    color: #76c7ff;
 }
 
 header nav ul li a.active {
-    color: #76c7ff; /* Warna biru muda untuk link aktif */
+    color: #76c7ff;
     font-weight: bold;
 }
 
+/* Main Sections */
 main {
-    flex: 1;
-    padding: auto; /* Padding atas untuk mengimbangi header */
+    padding: 0;
 }
 
 section {
-    margin: auto; /* Memusatkan konten */
-    margin: 80px auto -200;
+    margin: auto;
+    margin-top: 80px;
     border-radius: 10px;
 }
-#home {
-    margin: 80px auto 0;
-}
-#home, #about, #projects {
-    background: #1a1a1a; /* Background gelap */
+#home, #about, #projects{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 80px auto 0;
     padding: 40px;
+    border-radius: 30px;
     transition: transform 0.3s;
-    border-radius: 30px;
-    max-width: 60%;
+    max-width: 65%;
 }
-#skills {
-    background: #1f1f1f; /* Background section gelap */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 80px auto 0;
-    padding: 40px;
-    border-radius: 30px;
-    transition: transform 0.3s;  
-    max-width: 60%;
+
+/* Home */
+#home {
+    margin-top: 80px;
 }
+
 #home .content {
     max-width: 600px;
-    margin-right: 20px; /* Menambahkan margin kanan */
 }
 
 #home img {
@@ -115,7 +106,7 @@ section {
 
 #home .btn {
     display: inline-block;
-    background: #76c7ff; /* Background biru muda */
+    background: #76c7ff;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -125,18 +116,18 @@ section {
 }
 
 #home .btn:hover {
-    background: #5ab1f8; /* Warna biru muda lebih gelap saat hover */
+    background: #5ab1f8;
 }
 
 #home .socials a {
-    color: #76c7ff; /* Warna biru muda */
+    color: #76c7ff;
     margin: 10px;
     font-size: 24px;
     text-decoration: none;
 }
 
-#home:hover, #about:hover, #skills:hover, #projects:hover{
-    transform: scale(1.05);
+#about .about-container {
+    max-width: 100%;
 }
 
 #about .stats {
@@ -152,12 +143,12 @@ section {
 #about .stats span {
     display: block;
     font-size: 24px;
-    color: #76c7ff; /* Warna biru muda */
+    color: #76c7ff;
 }
 
 #about .btn {
     display: inline-block;
-    background: #76c7ff; /* Background biru muda */
+    background: #76c7ff;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -167,7 +158,15 @@ section {
 }
 
 #about .btn:hover {
-    background: #5ab1f8; /* Warna biru muda lebih gelap saat hover */
+    background: #5ab1f8;
+}
+
+/* Skills */
+#skills {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 30px;
+    transition: transform 0.3s;
 }
 
 #skills .skill {
@@ -175,7 +174,7 @@ section {
 }
 
 #skills .bar {
-    background: #333333; /* Background bar gelap */
+    background: #333333;
     border-radius: 5px;
     margin-top: 10px;
     overflow: hidden;
@@ -183,17 +182,92 @@ section {
 }
 
 #skills .bar-fill {
-    background: #76c7ff; /* Warna biru muda */
+    background: #76c7ff;
     padding: 10px;
     color: white;
     text-align: right;
     border-radius: 5px;
 }
 
-footer {
-    background: #1f1f1f; /* Background footer gelap */
+/* Projects */
+#projects {
+    overflow: hidden;
+}
+.btn {
+    display: inline-block;
+    background: #76c7ff;
     color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
 
+.btn:hover {
+    background: #5ab1f8;
+}
+/* Swiper */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #007BFF;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-pagination {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    background: #007BFF;
+}
+.portfolio__img1 {
+    padding-left: 5%;
+    max-width: 500px;
+}
+.portfolio__img2 {
+    padding-left: 5%;
+    max-width: 200px;
+}
+.portfolio__data {
+    margin-block-start: auto;
+}
+/* Education */
+#education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+    max-width: 65%;
+}
+
+/* Footer */
+footer {
+    background: #1f1f1f;
+    color: white;
     width: 100%;
     position: relative;
     padding: 20px;
@@ -237,6 +311,7 @@ footer {
 .footer__copyright {
     margin-top: 10px;
 }
+
 .socials {
     display: flex;
     justify-content: center;
@@ -244,7 +319,7 @@ footer {
 }
 
 .social-icon {
-    color: #76c7ff; /* Warna biru muda */
+    color: #76c7ff;
     font-size: 24px;
     text-decoration: none;
     margin: 0 10px;
@@ -252,9 +327,5 @@ footer {
 }
 
 .social-icon:hover {
-    color: #5ab1f8; /* Warna biru muda lebih gelap saat hover */
+    color: #5ab1f8;
 }
-
-
-
-
